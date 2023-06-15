@@ -21,7 +21,7 @@ import java.util.Map;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    private UserService userService;//su
 
     /**
      * 发送手机短信验证码
