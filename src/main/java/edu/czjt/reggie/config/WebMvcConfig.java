@@ -1,6 +1,7 @@
 package edu.czjt.reggie.config;
 
 import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
+import edu.czjt.reggie.common.JacksonObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,7 +36,7 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
         registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
-
+   // WebJars是一种将客户端库打包成JAR文件并以Maven依赖的形式引入到项目中的方法。
     /**
      * 扩展mvc框架的消息转换器
      *
@@ -56,6 +57,10 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
      * 创建 Swagger API
      * @return
      */
+
+    //使用.apiInfo(apiInfo())方法设置了API的基本信息，包括标题、描述和版本等。
+    //接下来，使用.select()方法获取一个ApiSelectorBuilder对象，用于指定哪些接口和路径将会生成API文档。
+    //.apis(RequestHandlerSelectors.basePackage("edu.czjt.reggie.controller"))指定了只扫描位于edu.czjt.reggie.controller包下的控制器类，用于生成API文档。
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
