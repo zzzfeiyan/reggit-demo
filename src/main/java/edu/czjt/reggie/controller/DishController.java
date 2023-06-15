@@ -29,6 +29,7 @@ import java.util.stream.Collectors;
 @Slf4j  // 引入日志注解
 public class DishController {
 
+
     @Autowired
     private DishService dishService;  // 自动注入DishService
     @Autowired

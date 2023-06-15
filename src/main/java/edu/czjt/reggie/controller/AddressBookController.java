@@ -21,6 +21,7 @@ import java.util.List;
 @RequestMapping("/addressBook")  // 定义控制器的根路径
 public class AddressBookController {
 
+
     @Autowired
     private AddressBookService addressBookService;  // 自动注入AddressBookService
 

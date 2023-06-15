@@ -19,6 +19,7 @@ import java.util.List;
 @Slf4j  // 引入日志注解
 public class CategoryController {
 
+
     @Autowired
     private CategoryService categoryService;  // 自动注入CategoryService
 
