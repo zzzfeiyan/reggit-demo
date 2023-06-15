@@ -15,6 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderDetailController {
 
     @Autowired
-    private OrderDetailService orderDetailService;
+    private OrderDetailService orderDetailService;//su
 
 }

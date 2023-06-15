@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 public class OrderController {
 
     @Autowired
-    private OrderService orderService;
+    private OrderService orderService;//su
     private LambdaQueryWrapper<Orders> q;
 
 

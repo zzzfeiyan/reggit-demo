@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 public class SetmealController {
 
     @Autowired
-    private SetmealService setmealService;
+    private SetmealService setmealService;//su
 
     @Autowired
     private CategoryService categoryService;
